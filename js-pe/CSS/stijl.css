@@ -1,0 +1,26 @@
+#hr{
+    
+    width: 100%;
+    border-style: solid;
+    color: black;
+}
+
+.colom{
+    padding-top: 30px;
+}
+
+.groep{
+    padding-left: 20px;
+}
+#labelText{
+    font-size: small;
+}
+
+#alertBox, #alertBox2{
+    display: none;
+}
+
+#knop{
+    width: 100%;
+    margin-bottom: 10px;
+}

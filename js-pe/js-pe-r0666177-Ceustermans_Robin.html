@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE_Opdracht</title>
+    <link rel="stylesheet" href="CSS/stijl.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <!--Ik moet onderstaande code gebruiken vanwege een bug bij de browser-->
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registreer</h1>
+        <p>Meld je aan bij Anoroc Services, wij beschermen jouw software tegen malware!</p>
+        <div class="row">
+
+            <div class="col-md-7 md ">
+
+
+
+                <form action="" onsubmit="return false"> <!--Nu wordt de form nooit verstuurd-->
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Voornaam</label>
+                            <input type="text" class="form-control" id="voornaam" placeholder="Uw Voornaam">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Achternaam</label>
+                            <input type="text" class="form-control" id="achternaam" placeholder="Uw Achternaam">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Gebruikersnaam</label>
+                            <input type="text" class="form-control" id="gebruikersnaam" placeholder="Uw Gebruikersnaam">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>E-mailadres</label>
+                            <input type="email" class="form-control" id="email" placeholder="Uw E-mailadres">
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Wachtwoord</label>
+                            <input type="password" class="form-control" id="passwoord">
+                            <span id="labelText">Het wachtwoord moet minstens 8 karakters lang zijn</span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Herhaal Wachtwoord</label>
+                            <input type="password" class="form-control" id="passwoord2">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Adres (straat en huisnummer)</label>
+                            <input type="text" class="form-control" id="adres"
+                                placeholder="Uw Adres (straat en huisnummer)">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label>Uw Land</label>
+                            <select name="landen" id="land" class="form-control selectpicker">
+                                <option value="placeholder" selected>---Kies uw land---</option>
+                                <option>België</option>
+                                <option>Nederland</option>
+                                <option>Duitsland</option>
+                                <option>Nederland</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label>Uw Provincie</label>
+                            <select name="provinciën" id="provincie" class="form-control selectpicker">
+                                <option value="placeholder" selected>---Kies uw provincie---</option>
+                                <option>Oost-Vlaanderen</option>
+                                <option>West-Vlaanderen</option>
+                                <option>Antwerpen</option>
+                                <option>Limburg</option>
+                                <option>Vlaams-Brabant</option>
+                                <option>Brussel</option>
+                                <option>Waals-Brabant</option>
+                                <option>Henegouwen</option>
+                                <option>Luik</option>
+                                <option>Namen</option>
+                                <option>Luxemburg</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Uw Postcode</label>
+                            <input type="number" class="form-control" id="postcode" placeholder="Postcode">
+                        </div>
+                    </div>
+
+                    <hr id="hr">
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <h4>Hou me op de hoogte</h4>
+                            <div class="form-group groep">
+                                <input type="checkbox" class="form-check-input" id="nieuwsbrief">
+                                <label class="form-check-label">Inschrijven voor onze
+                                    nieuwsbrief</label>
+                            </div>
+                            <div class="form-group groep">
+                                <input type="checkbox" class="form-check-input" id="voorwaarden">
+                                <label>Ik ga akkoord met de algemene voorwaarden</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <h4>Betaling</h4>
+                            <div class="form-group groep">
+                                <input type="radio" class="form-check-input" name="betaling" id="bankingApp"
+                                    value="option1">
+                                <label class="form-check-label">Banking App</label>
+                            </div>
+                            <div class="form-group groep">
+                                <input type="radio" class="form-check-input" name="betaling" id="overschrijving"
+                                    value="option2">
+                                <label class="form-check-label">Overschrijving</label>
+                            </div>
+                            <div class="form-group groep">
+                                <input type="radio" class="form-check-input" name="betaling" id="visaCard"
+                                    value="option3">
+                                <label class="form-check-label">Visa Card</label>
+                            </div>
+                            <div class="form-group groep">
+                                <input type="radio" class="form-check-input" name="betaling" id="payPal"
+                                    value="option4">
+                                <label class="form-check-label">PayPal</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="validateForm()" id="knop" name="Knop" class="btn btn-primary">Wave your magic
+                        wand</button>
+                </form>
+
+            </div>
+
+            <div class="col-md-5 md ">
+                <div class="colom">
+                    <div class="container">
+                        <div class="col-md-12">
+                            <div id="alertBox" role="alert">
+                                <h4 id="h4">Registratie</h4>
+                                <p id="para"></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="colom">
+                    <div class="container">
+                        <div class="col-md-12">
+                            <div id="alertBox2" role="alert">
+                                <h4 id="h4b">Betalingswijze</h4>
+                                <p id="parab"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="JS/JavaScript.js"></script>
+    <!--Ik moet de jquery er bij zetten, omdat anders bij het inspecteren een uncaught exeption komt te staan-->
+    <script src="JS/jquery-3.6.0.min.js"></script>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
