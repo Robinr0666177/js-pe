@@ -94,6 +94,7 @@ function validateForm() {
     //als array lengte van 0 heeft alert succes en betalingswijze, anders foutenmeldingen
     if (foutenArray.length > 1) {
         document.getElementById("alertBox").className = 'alert alert-danger';
+        document.getElementById("alertBox2").className = '';
         document.getElementById("h4").innerHTML = "Yikes, Errors...";
         document.getElementById("para").innerHTML = foutenArray.toString().replaceAll(",", " ");
         document.getElementById("h4b").innerHTML = "";
